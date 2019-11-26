@@ -19,8 +19,20 @@
 .tar.z 解压 tar zxvf filename.tar.z
 .tar.z 压缩 tar zcvf filename.tar.z dirname
 
-.zip 解压 unzip filename.zip
-.zip 压缩 zip filename.zip dirname
+
+
+.zip 解压 
+unzip filename.zip
+unzip -d /temp test.zip  # 如果要把文件解压到指定的目录下，需要用到-d参数。
+unzip -n test.zip   # 不想覆盖已经存在的文件，那么可以加上-n参数
+unzip -t test.zip  # 检查zip文件是否损坏
+unzip -o test.zip -d /tmp/  # 将压缩文件test.zip在指定目录tmp下解压缩，如果已有相同的文件存在，要求unzip命令覆盖原先的文件
+
+.zip 压缩 
+zip filename.zip dirname
+
+
+
 
 .rar 解压 rar x filename.rar
 .rar 压缩 rar a filename.rar dirname
